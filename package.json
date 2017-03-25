@@ -1,0 +1,14 @@
+{
+  "name": "yepnope",
+  "version": "0.0.1",
+  "description": "Yepnope transforms yes/no answers into booleans",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jasmine test/test.spec.js"
+  },
+  "author": "Jonathan Tavares <jonathan@impossible.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
