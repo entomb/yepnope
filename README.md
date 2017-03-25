@@ -26,7 +26,7 @@ require the lib using `const yepnope = require('yepnoe')`
     }
 
     if(response.false){
-      return 'ups! i\'ll do anothing thing then!';
+      return 'ups! i\'ll do something else then!';
     }
 
     if(!response.false && !response.true){
