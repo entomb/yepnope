@@ -4,7 +4,7 @@ Yepnope
 
 Yepnope transforms yes/no answers into bools, very usefull for chatbots and command line tools.
 
-##Usage
+## Usage
 require the lib using `const yepnope = require('yepnoe')`
 
 ```javascript
@@ -16,21 +16,21 @@ require the lib using `const yepnope = require('yepnoe')`
   //notok.false === true
 ```
 
-##Example
+## Example
 ```javascript
   function parseAnswer(text){
     var response = new yepnope(text);
 
     if(response.true){
-      return 'thanks! i'll do that!';
+      return 'thanks! i\'ll do that!';
     }
 
     if(response.false){
-      return 'ups! i'll do anothing thing then!';
+      return 'ups! i\'ll do anothing thing then!';
     }
 
     if(!response.false && !response.true){
-      return 'I don't understand!'
+      return 'I don\'t understand!'
     }
 
   }
