@@ -8,11 +8,11 @@ Yepnope transforms yes/no answers into bools, very usefull for chatbots and comm
 require the lib using `const yepnope = require('yepnoe')`
 
 ```javascript
-  var ok = new yepnoe('yes')
+  var ok = new yepnope('yes')
   //ok.true === true
 
 
-  var notok = new yepnoe('nope')
+  var notok = new yepnope('nope')
   //notok.false === true
 ```
 
