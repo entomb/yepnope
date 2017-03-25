@@ -3,13 +3,13 @@
 const yepnope = require('../lib/index.js')
 const assert = require('assert')
 
-describe('init', ()=>{
-    it('who tests the tests?', ()=>{
-      expect(true).toBe(true);
-    })
+describe('init', () => {
+  it('who tests the tests?', () => {
+    expect(true).toBe(true)
+  })
 })
 
-describe('Yepnope', ()=>{
+describe('Yepnope', () => {
 
   it('should create a yepnope obj', () => {
     let obj = new yepnope()
@@ -26,11 +26,10 @@ describe('Yepnope', ()=>{
     expect(obj.false).toBeDefined()
     expect(obj.parse).toBeDefined()
     expect(typeof obj.parse).toBe('function')
-
   })
 
   describe('.parse()', () => {
-     it('should be chainable', () => {
+    it('should be chainable', () => {
       let obj = new yepnope()
       let obj2 = obj.parse()
       let obj3 = obj.parse().parse()
@@ -41,10 +40,8 @@ describe('Yepnope', ()=>{
       expect(obj instanceof yepnope).toBe(true)
       expect(obj2 instanceof yepnope).toBe(true)
       expect(obj3 instanceof yepnope).toBe(true)
-
     })
   })
-
 
   describe(' is POSITIVE about', () => {
 
@@ -63,14 +60,12 @@ describe('Yepnope', ()=>{
       options.forEach(yep => {
         expect((new yepnope(yep)).true).toBe(true, yep + ' means yes')
       })
-
     })
-
   })
 
   describe(' is NEGATIVE about', () => {
 
-    it('simple NO', () =>{
+    it('simple NO', () => {
       let obj = new yepnope('no');
 
       expect(obj.false).toBe(true)
@@ -79,15 +74,13 @@ describe('Yepnope', ()=>{
 
     it('complex NO', () => {
       let options = [
-          'nope', 'n', 'nn', 'nepia', 'not', 'not today', 'nooope', 'noo', 'nooo', 'false', 'negative'
-        ];
+        'nope', 'n', 'nn', 'nepia', 'not', 'not today', 'nooope', 'noo', 'nooo', 'false', 'negative'
+      ];
 
       options.forEach(nope => {
         expect((new yepnope(nope)).false).toBe(true, nope + ' means NO')
       })
-
     })
-
   })
 
 });
