@@ -1,6 +1,6 @@
 {
   "name": "yepnope",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Yepnope transforms yes/no answers into booleans",
   "main": "lib/index.js",
   "scripts": {
