@@ -54,7 +54,25 @@ describe('Yepnope', () => {
 
     it('complex YES', () => {
       let options = [
-        'yep', 'yepp', 'y', 'yy', 'sure', 'ok', 'oki', 'okay', 'true', 'affirmative', 'why not?'
+        'yep', 'ya', 'yepp', 'y', 'yy', 'sure', 'ok', 'oki', 'okay', 'true', 'affirmative',
+        ];
+
+      options.forEach(yep => {
+        expect((new yepnope(yep)).true).toBe(true, yep + ' means yes')
+      })
+    })
+
+
+    it('YES is a phrase', () => {
+      let options = [
+        'yes.',
+        'y! do that!',
+        'YeS in special CASE',
+        'yeah, sure!',
+        'yes please',
+        'yep @botname',
+        'sure, @botname',
+        'yes! i would like that!'
       ];
 
       options.forEach(yep => {
@@ -74,13 +92,53 @@ describe('Yepnope', () => {
 
     it('complex NO', () => {
       let options = [
-        'nope', 'n', 'nn', 'nepia', 'not', 'not today', 'nooope', 'noo', 'nooo', 'false', 'negative'
+        'nope', 'n', 'nn', 'nepia', 'not today', 'not again', 'nooope', 'noo', 'nooo', 'false', 'negative'
       ];
 
       options.forEach(nope => {
         expect((new yepnope(nope)).false).toBe(true, nope + ' means NO')
       })
     })
+
+    it('NO is a phrase', () => {
+      let options = [
+        'no.',
+        'n! dont do that',
+        'nOpE in special CASE',
+        'nope, not today!',
+        'no please',
+        'no @botname',
+        'nooope, @botname',
+        'NO! i wont like that!'
+      ];
+
+      options.forEach(yep => {
+        expect((new yepnope(yep)).true).toBe(false, yep + ' means no')
+      })
+    })
+  })
+
+
+  it(' is UNSURE about', () => {
+      let options = [
+        '', 
+        'not sure',
+        'dont want no short dick men',
+        'what',
+        'why not?',
+        'some phrase with yes in it',
+        'some phrase with no in it',
+        'dfa sdf asdf ',
+        3,
+        {},
+        [],
+        undefined
+      ];
+
+     options.forEach(unsure => {
+        expect((new yepnope(unsure)).true).toBe(false, 'is unsure about:' + unsure)
+        expect((new yepnope(unsure)).false).toBe(false, 'is unsure about:' + unsure)
+      })
   })
 
 });
