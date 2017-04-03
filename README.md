@@ -35,3 +35,44 @@ require the lib using `const yepnope = require('yepnoe')`
 
   }
 ```
+## yep detection:
+### yepnope is POSITIVE about:
+- 'yes.'
+- 'yy'
+- 'yepp'
+- 'y! do that!'
+- 'YeS in special CASE'
+- 'yeah, sure!'
+- 'yes please'
+- 'yep @botname'
+- 'sure, @botname'
+- 'yes! i would like that!'
+
+
+### yepnope is NEGATIVE about:
+- 'no.'
+- 'nn'
+- 'nope'
+- 'noope'
+- 'n! dont do that'
+- 'nOpE in special CASE'
+- 'nope, not today!'
+- 'no please'
+- 'no @botname'
+- 'nooope, @botname'
+- 'NO! i wont like that!'
+
+
+### yepnope is UNSURE about:
+- '', 
+- 'not sure'
+- 'dont want no short dick men'
+- 'what'
+- 'why not?'
+- 'some phrase with yes in it'
+- 'some phrase with no in it'
+- 'dfa sdf asdf '
+- 3
+- {}
+- []
+- undefined
